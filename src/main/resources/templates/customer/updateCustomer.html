@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update A Product</title>
+</head>
+<body>
+
+<h1>Update A Product</h1>
+
+<div class="container">
+
+
+
+    <form action="/updatedproduct" method="post">
+
+        <label for="snusId">Customer ID</label>
+        <input type="text" name="customerId" id="snusId" th:value="${product.id}" readonly>
+        <br>
+        <label for="name">Customer Name</label>
+        <input type="text" name="name" id="name" th:value="${product.name}" >
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" th:value="${product.producer}" >
+        <br>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" id="phone" th:value="${product.price}" >
+        <br>
+        <label for="strength">address:</label>
+        <input type="text" name="strength" id="strength" th:value="${product.date}"  >
+        <br>
+        <label for="country">CPR:</label>
+        <input type="text" name="country" id="country" th:value="${product.active}" >
+
+        <button type="submit" name="submit" button class="btn btn-create">Update</button>
+    </form>
+</div>
+
+</body>
+</html>
